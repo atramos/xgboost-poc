@@ -1,0 +1,11 @@
+1. You have to install conda on your linux, follow this instructions and install miniconda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
+2.Create the environment from the .yml file I sent you: conda env create -f environment.yml
+3.The environment is called sagemaker you can activate it with: conda activate sagemaker
+
+The conda environment is an environment that holds most of the libraries you will need.
+
+4. You need to install the sagemaker extension via pip: pip install sagemaker-scikit-learn-extension
+5.copy(override) the read_data.py into /home/borut/miniconda3/envs/sagemaker/lib/python3.6/site-packages/sagemaker_sklearn_extension/externals
+6.copy and overried the encoders.py file into: /home/borut/miniconda3/envs/sagemaker/lib/python3.6/site-packages/sagemaker_sklearn_extension/preprocessing
+
+The environment should than be setup you can now run: python run_data_processing.py and make sure the file is inside "generated_module" folder.
